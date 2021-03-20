@@ -11,7 +11,6 @@ In a new terminal follow this steps
 
 1) $ cd catkin_ws/src/butler_control/teleop_twist_keyboard 
 2) $ chmod +x teleop_twist_keyboard.py
-teleop_twist_keyboard.py should now be an executable, able to control the Butler in the Simulation with Keyboard.
 3) $ rosrun butler_control teleop_twist_keyboard.py
 
 With custom values.
