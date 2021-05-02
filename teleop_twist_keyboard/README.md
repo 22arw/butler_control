@@ -1,26 +1,27 @@
 # teleop_twist_keyboard
-Generic Keyboard Teleop for ROS
+The Butler Keyboard Teleop for ROS 
 
 # Launch
 Run.
 ```
-rosrun butler_control teleop_twist_keyboard.py
+roslaunch butler_control teleop_keyboard.launch
 ```
-If ran into file is not executable error
-In a new terminal follow this steps
+If ran into file is not executable error, in a new terminal follow this steps below:
 
-1) $ cd catkin_ws/src/butler_control/teleop_twist_keyboard 
-2) $ chmod +x teleop_twist_keyboard.py
-3) $ rosrun butler_control teleop_twist_keyboard.py
+1)  cd catkin_ws/src/butler_control/teleop_twist_keyboard 
+2)  chmod +x teleop_twist_keyboard.py
+3)  rosrun butler_control teleop_twist_keyboard.py
+
+For more information visit (http://wiki.ros.org/teleop_twist_keyboard)
 
 With custom values.
 ```
-rosrun butler_control teleop_twist_keyboard.py _speed:=0.9 _turn:=0.8
+roslaunch butler_control teleop_keyboard.launch _speed:=0.9 _turn:=0.8
 ```
 
 Publishing to a different topic (in this case `my_cmd_vel`).
 ```
-rosrun butler_control teleop_twist_keyboard.py cmd_vel:=my_cmd_vel
+roslaunch butler_control teleop_keyboard.launch cmd_vel:=my_cmd_vel
 ```
 
 # Usage
@@ -57,7 +58,7 @@ If your mobile base requires constant updates on the cmd\_vel topic, teleop\_twi
 For example, to repeat the last command at 10Hz:
 
 ```
-rosrun butler_control teleop_twist_keyboard.py _repeat_rate:=10.0
+roslaunch butler_control teleop_keyboard.launch _repeat_rate:=10.0
 ```
 
 It is _highly_ recommened that the repeat rate be used in conjunction with the key timeout, to prevent runaway robots.
@@ -68,7 +69,7 @@ Teleop\_twist\_keyboard can be configured to stop your robot if it does not rece
 
 For example, to stop your robot if a keypress has not been received in 0.6 seconds:
 ```
-rosrun butler_control teleop_twist_keyboard.py _key_timeout:=0.6
+roslaunch butler_control teleop_keyboard.launch _key_timeout:=0.6
 ```
 
 It is recommended that you set `key_timeout` higher than the initial key repeat delay on your system (This delay is 0.5 seconds by default on Ubuntu, but can be adjusted).
