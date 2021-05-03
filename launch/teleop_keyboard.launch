@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-  
-  <node pkg="teleop_twist_keyboard" name="teleop_keyboard" type="teleop_twist_keyboard.py" output= "screen">
-    <remap from="/cmd_vel" to="/diff_drive_ctrl/cmd_vel"/>
-  </node>
+
+  <node pkg="butler_control" name="teleop_keyboard" type="teleop_twist_keyboard.py" output= "screen" />
 
 </launch>
