@@ -1,0 +1,10 @@
+gazebo_ros_control: # Needs to be tuned, not configured
+  pid_gains:  #Placeholder Values
+    base_link_left_wheel:
+      p: 1.0
+      i: 0.0
+      d: 0.0
+    base_link_right_wheel:
+      p: 1.0
+      i: 0.0
+      d: 0.0
